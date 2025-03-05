@@ -10,17 +10,8 @@ class Strings:
     def contar_vocales(self, cadena: str) -> int:
         return sum(1 for c in cadena.lower() if c in "aeiou")
     
-    def contar_consonantes(self, texto):
-        """
-        Cuenta el número de consonantes en una cadena.
-        
-        Args:
-            texto (str): Cadena para contar consonantes
-            
-        Returns:
-            int: Número de consonantes en la cadena
-        """
-        pass
+    def contar_consonantes(self, cadena: str) -> int:
+        return sum(1 for c in cadena.lower() if c.isalpha() and c not in "aeiou")
     
     def es_anagrama(self, texto1, texto2):
         """
