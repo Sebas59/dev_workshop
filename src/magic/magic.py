@@ -61,17 +61,7 @@ class Magic:
         return abs(a)
     
     def mcm(self, a, b):
-        """
-        Calcula el mínimo común múltiplo de dos números.
-        
-        Args:
-            a (int): Primer número
-            b (int): Segundo número
-            
-        Returns:
-            int: El mínimo común múltiplo de a y b
-        """
-        pass
+        return abs(a * b) // self.mcd(a, b) if a and b else 0
     
     def suma_digitos(self, n):
         """
