@@ -13,18 +13,8 @@ class Strings:
     def contar_consonantes(self, cadena: str) -> int:
         return sum(1 for c in cadena.lower() if c.isalpha() and c not in "aeiou")
     
-    def es_anagrama(self, texto1, texto2):
-        """
-        Verifica si dos cadenas son anagramas (contienen exactamente los mismos caracteres).
-        
-        Args:
-            texto1 (str): Primera cadena
-            texto2 (str): Segunda cadena
-            
-        Returns:
-            bool: True si son anagramas, False en caso contrario
-        """
-        pass
+    def es_anagrama(self, cadena1: str, cadena2: str) -> bool:
+        return sorted(c.lower() for c in cadena1 if c.isalnum()) == sorted(c.lower() for c in cadena2 if c.isalnum())
     
     def contar_palabras(self, texto):
         """
