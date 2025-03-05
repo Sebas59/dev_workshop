@@ -43,17 +43,9 @@ class Geometria:
         return (base_mayor + base_menor) * altura / 2
     
     def area_rombo(self, diagonal_mayor, diagonal_menor):
-        """
-        Calcula el área de un rombo usando sus diagonales.
-        
-        Args:
-            diagonal_mayor (float): Longitud de la diagonal mayor
-            diagonal_menor (float): Longitud de la diagonal menor
-            
-        Returns:
-            float: Área del rombo
-        """
-        pass
+        if diagonal_mayor < 0 or diagonal_menor < 0:
+            raise ValueError("Las diagonales deben ser valores no negativos.")
+        return (diagonal_mayor * diagonal_menor) / 2
     
     def area_pentagono_regular(self, lado, apotema):
         """
