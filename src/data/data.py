@@ -110,13 +110,8 @@ class Data:
         }
     
     def matriz_transpuesta(self, matriz):
-        """
-        Calcula la transpuesta de una matriz.
-        
-        Args:
-            matriz (list): Lista de listas que representa una matriz
-            
-        Returns:
-            list: Matriz transpuesta
-        """
-        pass
+        if not isinstance(matriz, list) or not all(isinstance(fila, list) for fila in matriz):
+            raise TypeError("La entrada debe ser una lista de listas.")
+        if not matriz:
+            return []
+        return [[fila[i] for fila in matriz] for i in range(len(matriz[0]))]
