@@ -67,13 +67,26 @@ class Data:
         return all(elemento in conjunto2 for elemento in conjunto1)
     
     def implementar_pila(self):
-        """
-        Implementa una estructura de datos tipo pila (stack) usando listas.
-        
-        Returns:
-            dict: Diccionario con métodos push, pop, peek y is_empty
-        """
-        pass
+        stack = [] 
+        def push(elemento):
+            stack.append(elemento)
+
+        def pop():
+            if is_empty():
+                raise IndexError("La pila está vacía")
+            return stack.pop()
+        def peek():
+            if is_empty():
+                raise IndexError("La pila está vacía")
+            return stack[-1]
+        def is_empty():
+            return len(stack) == 0
+        return {
+            "push": push,
+            "pop": pop,
+            "peek": peek,
+            "is_empty": is_empty,
+        }
     
     def implementar_cola(self):
         """
