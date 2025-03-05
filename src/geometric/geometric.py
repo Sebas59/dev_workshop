@@ -1,9 +1,7 @@
+import math
+
 class Geometria:
-    """
-    Class with geometric exercises.
-    Include basic and funny operations in 2D and 3D.
-    """
-    
+
     def area_rectangulo(self, base, altura):
         """
         Calcula el área de un rectángulo.
