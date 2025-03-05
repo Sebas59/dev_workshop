@@ -21,17 +21,9 @@ class Geometria:
         return 2 * math.pi * radio
     
     def area_triangulo(self, base, altura):
-        """
-        Calcula el área de un triángulo.
-        
-        Args:
-            base (float): Longitud de la base del triángulo
-            altura (float): Altura del triángulo
-            
-        Returns:
-            float: Área del triángulo
-        """
-        pass
+        if base < 0 or altura < 0:
+            raise ValueError("La base y la altura deben ser valores no negativos.")
+        return (base * altura) / 2
     
     def perimetro_triangulo(self, lado1, lado2, lado3):
         """
