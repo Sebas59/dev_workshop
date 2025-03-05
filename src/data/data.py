@@ -41,7 +41,7 @@ class Data:
             j += 1
         return combinada
     
-    def rotar_lista(self, lista, k):
+    def rotar_lista(self, lista, rotaciones):
         if not isinstance(lista, list):
             raise TypeError("El primer argumento debe ser una lista.")
         if not isinstance(rotaciones, int):
