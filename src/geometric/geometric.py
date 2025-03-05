@@ -68,16 +68,9 @@ class Geometria:
         return 6 * lado
     
     def volumen_cubo(self, lado):
-        """
-        Calcula el volumen de un cubo.
-        
-        Args:
-            lado (float): Longitud del lado del cubo
-            
-        Returns:
-            float: Volumen del cubo
-        """
-        pass
+        if lado < 0:
+            raise ValueError("El lado debe ser un valor no negativo.")
+        return lado ** 3
     
     def area_superficie_cubo(self, lado):
         """
