@@ -26,18 +26,11 @@ class Geometria:
         return (base * altura) / 2
     
     def perimetro_triangulo(self, lado1, lado2, lado3):
-        """
-        Calcula el perímetro de un triángulo.
-        
-        Args:
-            lado1 (float): Longitud del primer lado
-            lado2 (float): Longitud del segundo lado
-            lado3 (float): Longitud del tercer lado
-            
-        Returns:
-            float: Perímetro del triángulo
-        """
-        pass
+        if lado1 < 0 or lado2 < 0 or lado3 < 0:
+            raise ValueError("Los lados deben ser valores no negativos.")
+        if not (lado1 + lado2 > lado3 and lado1 + lado3 > lado2 and lado2 + lado3 > lado1):
+            raise ValueError("Los lados no forman un triángulo válido.")
+        return lado1 + lado2 + lado3
     
     def es_triangulo_valido(self, lado1, lado2, lado3):
         """
