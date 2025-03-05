@@ -109,19 +109,9 @@ class Geometria:
         return (punto_x, punto_y)
     
     def pendiente_recta(self, x1, y1, x2, y2):
-        """
-        Calcula la pendiente de una recta que pasa por dos puntos.
-        
-        Args:
-            x1 (float): Coordenada x del primer punto
-            y1 (float): Coordenada y del primer punto
-            x2 (float): Coordenada x del segundo punto
-            y2 (float): Coordenada y del segundo punto
-            
-        Returns:
-            float: Pendiente de la recta
-        """
-        pass
+        if x2 == x1:
+            raise ZeroDivisionError("La pendiente es infinita (línea vertical).")
+        return (y2 - y1) / (x2 - x1)
     
     def ecuacion_recta(self, x1, y1, x2, y2):
         """
