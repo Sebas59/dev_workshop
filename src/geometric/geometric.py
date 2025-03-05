@@ -93,17 +93,11 @@ class Geometria:
         return math.pi * (radio ** 2) * altura
     
     def area_superficie_cilindro(self, radio, altura):
-        """
-        Calcula el área de la superficie de un cilindro.
-        
-        Args:
-            radio (float): Radio de la base del cilindro
-            altura (float): Altura del cilindro
-            
-        Returns:
-            float: Área de la superficie del cilindro
-        """
-        pass
+        if radio < 0 or altura < 0:
+            raise ValueError("El radio y la altura deben ser valores no negativos.")
+        area_lateral = 2 * math.pi * radio * altura
+        area_bases = 2 * math.pi * (radio ** 2)
+        return area_lateral + area_bases
     
     def distancia_entre_puntos(self, x1, y1, x2, y2):
         """
