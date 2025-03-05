@@ -104,19 +104,9 @@ class Geometria:
         return round(distancia, 2)
     
     def punto_medio(self, x1, y1, x2, y2):
-        """
-        Calcula el punto medio entre dos puntos en un plano 2D.
-        
-        Args:
-            x1 (float): Coordenada x del primer punto
-            y1 (float): Coordenada y del primer punto
-            x2 (float): Coordenada x del segundo punto
-            y2 (float): Coordenada y del segundo punto
-            
-        Returns:
-            tuple: Coordenadas (x, y) del punto medio
-        """
-        pass
+        punto_x = (x1 + x2) / 2
+        punto_y = (y1 + y2) / 2
+        return (punto_x, punto_y)
     
     def pendiente_recta(self, x1, y1, x2, y2):
         """
