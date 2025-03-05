@@ -42,17 +42,14 @@ class Data:
         return combinada
     
     def rotar_lista(self, lista, k):
-        """
-        Rota los elementos de una lista k posiciones a la derecha.
-        
-        Args:
-            lista (list): Lista a rotar
-            k (int): Número de posiciones a rotar
-            
-        Returns:
-            list: Lista rotada
-        """
-        pass
+        if not isinstance(lista, list):
+            raise TypeError("El primer argumento debe ser una lista.")
+        if not isinstance(rotaciones, int):
+            raise TypeError("El segundo argumento debe ser un entero.")
+        if not lista or rotaciones == 0:
+            return lista
+        rotaciones_efectivas = rotaciones % len(lista)
+        return lista[-rotaciones_efectivas:] + lista[:-rotaciones_efectivas]
     
     def encuentra_numero_faltante(self, lista):
         """
