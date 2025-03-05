@@ -22,17 +22,24 @@ class Data:
         return lista_sin_duplicados
     
     def merge_ordenado(self, lista1, lista2):
-        """
-        Combina dos listas ordenadas en una sola lista ordenada.
-        
-        Args:
-            lista1 (list): Primera lista ordenada
-            lista2 (list): Segunda lista ordenada
-            
-        Returns:
-            list: Lista combinada y ordenada
-        """
-        pass
+        if not isinstance(lista1, list) or not isinstance(lista2, list):
+            raise TypeError("Los argumentos deben ser listas.")
+        combinada = []
+        i, j = 0, 0
+        while i < len(lista1) and j < len(lista2):
+            if lista1[i] < lista2[j]:
+                combinada.append(lista1[i])
+                i += 1
+            else:
+                combinada.append(lista2[j])
+                j += 1
+        while i < len(lista1):
+            combinada.append(lista1[i])
+            i += 1
+        while j < len(lista2):
+            combinada.append(lista2[j])
+            j += 1
+        return combinada
     
     def rotar_lista(self, lista, k):
         """
