@@ -24,17 +24,7 @@ class Logica:
     def implicacion(self, a: bool, b: bool) -> bool:
         return (not a) or b
     
-    def bi_implicacion(self, a, b):
-        """
-        Implementa la operación lógica de bi-implicación (a <-> b).
-        
-        Args:
-            a (bool): Primer valor booleano
-            b (bool): Segundo valor booleano
-            
-        Returns:
-            bool: Resultado de la bi-implicación
-        """
-        pass
+    def bi_implicacion(self, a: bool, b: bool) -> bool:
+        return a == b
     
     
